@@ -59,11 +59,21 @@ $('document').ready(function() {
     function score() {
         if (player === "X") {
             xWin = (xWin + 1);
-            $('#x-winner').html("X: " + xWin);
+            if (xWin == 1) {
+                $('#x-winner').html("X has 1 point!");
+            }
+            else {
+                $('#x-winner').html("X has " + xWin + " points!");
+            }
         }
         else if (player === "O") {
             oWin = (oWin + 1);
-            $('#o-winner').html("O: " + oWin);
+            if (oWin == 1) {
+                $('#o-winner').html("O has 1 point!");
+            }
+            else {
+                $('#o-winner').html("O has " + oWin + " points!");
+            }
         }
     }
 
