@@ -1,6 +1,4 @@
-
 $('document').ready(function() {
-
     var tds = $('td');
     var button = $('#button');
     var player = "X";
