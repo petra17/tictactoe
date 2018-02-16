@@ -4,11 +4,11 @@
 }
 
 .container {
-    width:500px;
-    height:500px;
+    width:480px;
+    height:480px;
     position:absolute;
-    margin-left:-250px; 
-    margin-top:-250px;
+    margin-left:-240px; 
+    margin-top:-240px;
     top:50%;
     left:50%;
     text-align: center;
@@ -40,7 +40,7 @@ button {
     border-radius: 10px;
     font-size: 20px;  
     padding: 10px 20px; 
-    margin: 10px; 
+    margin-top: 10px; 
 }
 
 table {
