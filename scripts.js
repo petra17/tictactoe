@@ -7,36 +7,26 @@ $('document').ready(function() {
     var oWin = 0;
 
     function checkGame(mark) {
-        if ($('#five').html() == mark) {
-            if ($('#one').html() == mark && $('#nine').html() == mark) {
+       for (i = 0; i < tds.length; i+=3) {
+           if ($(tds[i]).html() === mark && $(tds[i+1]).html() === mark && $(tds[i+2]).html() === mark) {
+               return "over";
+           }
+       }
+       for (i = 0; i < 3; i++) {
+            if ($(tds[i]).html() === mark && $(tds[i+3]).html() === mark && $(tds[i+6]).html() === mark) {
                 return "over";
             }
-            else if ($('#two').html() == mark && $('#eight').html() == mark) {
-                return "over";
-            }
-            else if ($('#three').html() == mark && $('#seven').html() == mark) {
-                return "over";
-            }
-            else if ($('#four').html() == mark && $('#six').html() == mark) {
-                return "over";
-            }
-        }
+        }   
 
-        else if ($('#seven').html() == mark) {
-            if ($('#eight').html() == mark && $('#nine').html() == mark) {
-                return "over";
-            }
-            else if ($('#one').html() == mark && $('#four').html() == mark) {
-                return "over";
-            }
+        if ($(tds[0]).html() === mark && $(tds[4]).html() === mark && $(tds[8]).html() === mark)  {
+            return "over";
         }
-
-        else if ($('#three').html() == mark && $('#six').html() == mark && $('#nine').html() == mark) {
+        if ($(tds[2]).html() === mark && $(tds[4]).html() === mark && $(tds[6]).html() === mark) {
             return "over";
         }
 
         for (i = 0; i < tds.length; i++) {
-            if (tds[i].innerText == "") {
+            if (tds[i].innerText === "") {
                 return "going";
             }
         } 
