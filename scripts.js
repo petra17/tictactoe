@@ -9,7 +9,6 @@ $('document').ready(function() {
     function checkGame(mark) {
         if ($('#five').html() == mark) {
             if ($('#one').html() == mark && $('#nine').html() == mark) {
-                $('p').html(mark + " has won");
                 return "over";
             }
             else if ($('#two').html() == mark && $('#eight').html() == mark) {
